@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    {% if manufacturer.Id %}
+        Edit Manufacturer
+    {% else %}
+        New Manufacturer
+    {% endif %}
+    {% endblock %}
+{% block body %}
+    <h1>
+        {% if manufacturer.Id %}
+            Edit Manufacturer
+        {% else %}
+            New Manufacturer
+        {% endif %}
+    </h1>
+    {{ form(form) }}
+{% endblock %}

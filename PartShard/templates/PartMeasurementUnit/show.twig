@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block title %}Get PartMeasurementUnit ID #{{ unit.ID }}{% endblock %}
+{% block body %}
+        <h1>Get PartMeasurementUnit ID #{{ unit.ID }}</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>ShortName</td>
+                    <td>isDefault</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ unit.ID }}</td>
+                    <td>{{ unit.Name }}</td>
+                    <td>{{ unit.ShortName }}</td>
+                    <td>{{ unit.isDefault }}</td>
+                </tr>
+            </tbody>
+        </table>
+{% endblock %}

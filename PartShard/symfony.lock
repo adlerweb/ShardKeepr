@@ -111,6 +111,18 @@
     "ocramius/proxy-manager": {
         "version": "2.2.3"
     },
+    "omines/datatables-bundle": {
+        "version": "0.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.1",
+            "ref": "467488ddc00aa190c37a4357f226457d4dd6b339"
+        },
+        "files": [
+            "config/packages/datatables.yaml"
+        ]
+    },
     "phpdocumentor/reflection-common": {
         "version": "2.0.0"
     },
@@ -146,6 +158,18 @@
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.2.1"
+    },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "410b9325a37ef86f1e47262c61738f6202202bca"
+        },
+        "files": [
+            "public/.htaccess"
+        ]
     },
     "symfony/asset": {
         "version": "v4.3.6"

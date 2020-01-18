@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block title %}Get Distributor ID #{{ distributor.ID }}{% endblock %}
+{% block body %}
+        <h1>Get Distributor ID #{{ distributor.ID }}</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Address</td>
+                    <td>URL</td>
+                    <td>email</td>
+                    <td>comment</td>
+                    <td>phone</td>
+                    <td>fax</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ distributor.id }}</td>
+                    <td>{{ distributor.name }}</td>
+                    <td>{{ distributor.address }}</td>
+                    <td><a href="{{ distributor.url }}">{{ distributor.url }}</a></td>
+                    <td><a href="mailto:{{ distributor.email }}">{{ distributor.email }}</a></td>
+                    <td>{{ distributor.comment }}</td>
+                    <td>{{ distributor.phone }}</td>
+                    <td>{{ distributor.fax }}</td>
+                </tr>
+            </tbody>
+        </table>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.twig" %}
+
+{% block title %}Get Manufacturer ID #{{ manufacturer.ID }}{% endblock %}
+{% block body %}
+        <h1>Get Manufacturer ID #{{ manufacturer.ID }}</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Address</td>
+                    <td>URL</td>
+                    <td>email</td>
+                    <td>comment</td>
+                    <td>phone</td>
+                    <td>fax</td>
+                    <td>Image</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ manufacturer.id }}</td>
+                    <td>{{ manufacturer.name }}</td>
+                    <td>{{ manufacturer.address }}</td>
+                    <td><a href="{{ manufacturer.url }}">{{ manufacturer.url }}</a></td>
+                    <td><a href="mailto:{{ manufacturer.email }}">{{ manufacturer.email }}</a></td>
+                    <td>{{ manufacturer.comment }}</td>
+                    <td>{{ manufacturer.phone }}</td>
+                    <td>{{ manufacturer.fax }}</td>
+                    <td>{% if manufacturer.icLogos is not null %}
+                    <img src="{{ path('image', {type: manufacturer.icLogos.type, file: manufacturer.icLogos.filename ~ '.' ~ manufacturer.icLogos.extension}) }}"></td>
+                    {% endif %}
+                </tr>
+            </tbody>
+        </table>
+{% endblock %}

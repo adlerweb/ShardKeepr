@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block title %}Distributor{% endblock %}
+{% block body %}
+        <div class="float-right"><a href="{{ path('Distributor.create') }}"><button type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add</button></a></div>
+        <h1>Distributors</h1>
+        <div id="distributors">Loading...</div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(function() {
+            $('#distributors').initDataTables({{ datatable_settings(datatable) }}, {responsive: true});
+        });
+    </script>
+{% endblock %}

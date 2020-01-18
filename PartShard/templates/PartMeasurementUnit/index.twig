@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block title %}List PartMeasurementUnit{% endblock %}
+{% block body %}
+        <h1>List PartMeasurementUnit</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>ShortName</td>
+                    <td>isDefault</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for unit in units %}
+                <tr>
+                    <td>{{ unit.ID }}</td>
+                    <td>{{ unit.Name }}</td>
+                    <td>{{ unit.ShortName }}</td>
+                    <td>{{ unit.isDefault }}</td>
+                    <td>
+                        <a href="{{ path('PartMeasurementUnit.show', {id: unit.ID}) }}"><button type="button" class="btn btn-primary"><i class="fa fa-file"></i> Details</button></a>
+                        <a href="{{ path('PartMeasurementUnit.remove', {id: unit.ID}) }}"><button type="button" class="btn btn-danger"><i class="fa fa-minus-circle"></i> Remove</button></a>
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="{{ path('PartMeasurementUnit.create') }}"><button type="button" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+{% endblock %}
