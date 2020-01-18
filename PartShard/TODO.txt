@@ -1,0 +1,51 @@
+SQL Changes
+DROP TABLE UserProvider;
+DROP TABLE TipOfTheDay;
+DROP TABLE TipOfTheDayHistory;
+DROP TABLE UserPreference;
+DROP TABLE TempUploadedFile;
+DROP TABLE TempImage;
+DROP TABLE SystemPreference;
+DROP TABLE SystemNotice;
+DROP TABLE StatisticSnapshot;
+DROP TABLE StatisticSnapshotUnit;
+DROP TABLE ReportProject;
+DROP TABLE ReportPart;
+DROP TABLE Report;
+ImportPreset
+GridPreset
+CronLogger
+CachedImage
+BatchJobUpdateField
+BatchJobQueryField
+BatchJob
+
+FOSUser
+
+//@Todo Convert Users
+//@Todo Initial import?
+//@Todo TempUploadedFile -> DELETE
+//@Todo TempImage -> DELETE
+
+
+
+
+
+
+Todo Tabellen:
+
+Project -> User
+ProjectAttachment -> Project
+ProjectRun -> Project
+
+PartCategory
+Part -> PartCategory,Footprint,StorageLocation,PartUnit
+PartAttachment -> Part
+PartParameter -> Part,Unit,SiPrefix
+PartManufacturer -> Part,Manufacturer
+PartDistributor -> Part,PartDistributor
+
+ProjectRunPart -> ProjectRun,Part
+ProjectPart -> Project,Part
+MetaPartParameterCriteria -> Part,Unit,SiPrefix
+StockEntry -> User,Part
