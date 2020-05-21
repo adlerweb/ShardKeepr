@@ -90,9 +90,6 @@
     "egulias/email-validator": {
         "version": "2.1.11"
     },
-    "fig/link-util": {
-        "version": "1.0.0"
-    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -122,6 +119,9 @@
         "files": [
             "config/packages/datatables.yaml"
         ]
+    },
+    "php": {
+        "version": "7.4"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.0.0"
