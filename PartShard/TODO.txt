@@ -34,8 +34,6 @@ FOSUser
 
 Todo Tabellen:
 
-Project -> User
-ProjectAttachment -> Project
 ProjectRun -> Project
 
 PartCategory
@@ -49,3 +47,14 @@ ProjectRunPart -> ProjectRun,Part
 ProjectPart -> Project,Part
 MetaPartParameterCriteria -> Part,Unit,SiPrefix
 StockEntry -> User,Part
+
+
+
+
+ created: src/Entity/Name.php
+ created: src/Repository/NameRepository.php
+
+
+
+Requires Datatabes Patch: https://github.com/omines/datatables-bundle/pull/101
+
